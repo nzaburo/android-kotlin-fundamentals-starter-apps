@@ -133,7 +133,11 @@ class GameFragment : Fragment() {
                         binding.invalidateAll()
                     } else {
                         view.findNavController()
-                            .navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment())
+                            .navigate(
+                                GameFragmentDirections.actionGameFragmentToGameWonFragment(
+                                    numQuestions, questionIndex
+                                )
+                            )
                     }
                 } else {
                     view.findNavController()
